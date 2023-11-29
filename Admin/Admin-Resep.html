@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Food Recipe Luthfiya</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Nov 17 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="Admin-Dashboard.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="Admin-Users.html">
+          <i class="bi bi-people"></i>
+          <span>Data User</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="Admin-Resep.html">
+          <i class="bi bi-cookie"></i>
+          <span>Data Resep</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Kategori.html">
+          <i class="bi bi-list-ul"></i>
+          <span>Data Kategori</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Bahan.html">
+          <i class="bi bi-person"></i>
+          <span>Data Bahan</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Langkah.html">
+          <i class="bi bi-bar-chart-steps"></i>
+          <span>Data Langkah</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data Resep</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="Admin-Dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Data Resep</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Data Resep</h5>
+              <p>Tabel ini menampilkan data dari seluruh pengguna dengan jelas dan terstruktur. Informasi seperti ID_Resep, Nama, Deskripsi, Waktu, Foto, Kategori dan Porsi dapat diakses dengan mudah dan memungkinkan pemantauan menyeluruh terhadap partisipasi pengguna dalam Food Recipe.</p>
+              <!-- Table with stripped rows -->
+              <a href="Admin-Resep-Edit.html" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-1"></i>Tambah Data
+              </a>
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Id_Resep</th>
+                    <th>Nama_Resep</th>
+                    <th>Deskripsi</th>
+                    <th>Waktu</th>
+                    <th>Foto</th>
+                    <th>Kategori</th>
+                    <th>Porsi</th>
+                    <th>Action</th>
+
+                  </tr>
+                </thead>
+
+                <!-- Start modal delete -->
+                <div class="modal fade" id="verticalycentered" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Nama</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Yakin Menghapus data ini?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                        <button type="button" class="btn btn-danger" >Hapus</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Modal-->
+
+                <tbody>
+                    <!-- Recipe 1-->
+                    <tr>
+                        <td>1</td>
+                        <td>RSP012</td>
+                        <td>Masakan Nusantara</td>
+                        <td>Deskripsi resep...</td>
+                        <td>30 menit</td>
+                        <td>NasGor.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td>RSP345</td>
+                        <td>Ayam Goreng</td>
+                        <td>Deskripsi resep...</td>
+                        <td>45 menit</td>
+                        <td>AyamGoreng.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>5</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td>RSP678</td>
+                        <td>Soto Ayam</td>
+                        <td>Deskripsi resep...</td>
+                        <td>60 menit</td>
+                        <td>SotoAyam.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.5</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Recipe 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td>RSP987</td>
+                        <td>Mie Goreng</td>
+                        <td>Deskripsi resep...</td>
+                        <td>20 menit</td>
+                        <td>MieGoreng.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.2</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 5 -->
+                    <tr>
+                        <td>5</td>
+                        <td>RSP789</td>
+                        <td>Rendang</td>
+                        <td>Deskripsi resep...</td>
+                        <td>120 menit</td>
+                        <td>Rendang.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.8</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 6 -->
+                    <tr>
+                        <td>6</td>
+                        <td>RSP567</td>
+                        <td>Gado-Gado</td>
+                        <td>Deskripsi resep...</td>
+                        <td>25 menit</td>
+                        <td>GadoGado.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.5</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Recipe 7 -->
+                    <tr>
+                        <td>7</td>
+                        <td>RSP234</td>
+                        <td>Sate Ayam</td>
+                        <td>Deskripsi resep...</td>
+                        <td>40 menit</td>
+                        <td>SateAyam.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.6</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 8 -->
+                    <tr>
+                        <td>8</td>
+                        <td>RSP456</td>
+                        <td>Nasi Goreng</td>
+                        <td>Deskripsi resep...</td>
+                        <td>35 menit</td>
+                        <td>NasiGoreng.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.7</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 9 -->
+                    <tr>
+                        <td>9</td>
+                        <td>RSP789</td>
+                        <td>Capcay</td>
+                        <td>Deskripsi resep...</td>
+                        <td>30 menit</td>
+                        <td>Capcay.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.4</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Recipe 10 -->
+                    <tr>
+                        <td>10</td>
+                        <td>RSP101</td>
+                        <td>Sop Buntut</td>
+                        <td>Deskripsi resep...</td>
+                        <td>90 menit</td>
+                        <td>SopBuntut.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.9</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 11 -->
+                    <tr>
+                        <td>11</td>
+                        <td>RSP202</td>
+                        <td>Pecel Lele</td>
+                        <td>Deskripsi resep...</td>
+                        <td>40 menit</td>
+                        <td>PecelLele.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.5</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 12 -->
+                    <tr>
+                        <td>12</td>
+                        <td>RSP303</td>
+                        <td>Nasi Uduk</td>
+                        <td>Deskripsi resep...</td>
+                        <td>50 menit</td>
+                        <td>NasiUduk.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.7</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Recipe 13 -->
+                    <tr>
+                        <td>13</td>
+                        <td>RSP404</td>
+                        <td>Ayam Bakar</td>
+                        <td>Deskripsi resep...</td>
+                        <td>50 menit</td>
+                        <td>AyamBakar.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.6</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 14 -->
+                    <tr>
+                        <td>14</td>
+                        <td>RSP505</td>
+                        <td>Pisang Goreng</td>
+                        <td>Deskripsi resep...</td>
+                        <td>20 menit</td>
+                        <td>PisangGoreng.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.8</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Recipe 15 -->
+                    <tr>
+                        <td>15</td>
+                        <td>RSP606</td>
+                        <td>Martabak</td>
+                        <td>Deskripsi resep...</td>
+                        <td>60 menit</td>
+                        <td>Martabak.jpg</td>
+                        <td>Masakan Indonesia</td>
+                        <td>4.7</td>
+                        <td>
+                            <div class='btn-group'>
+                                <a href='Admin-Resep-Edit.html' class='btn btn-warning'>Edit</a>
+                                <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#hapusModal">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Luthfiya</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Food Recipe Luthfiya</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Nov 17 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="Admin-Dashboard.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link " href="Admin-Users.html">
+          <i class="bi bi-people"></i>
+          <span>Data User</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Resep.html">
+          <i class="bi bi-cookie"></i>
+          <span>Data Resep</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Kategori.html">
+          <i class="bi bi-list-ul"></i>
+          <span>Data Kategori</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Bahan.html">
+          <i class="bi bi-person"></i>
+          <span>Data Bahan</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Admin-Langkah.html">
+          <i class="bi bi-bar-chart-steps"></i>
+          <span>Data Langkah</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data User</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="Admin-Dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Data User</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Data Users</h5>
+              <p>Tabel ini menampilkan data dari seluruh pengguna dengan jelas dan terstruktur. Informasi seperti ID_User, Nama, Email, Password dan Tanggal Bergabung dapat diakses dengan mudah dan memungkinkan pemantauan menyeluruh terhadap partisipasi pengguna dalam Food Recipe.</p>
+              <!-- Table with stripped rows -->
+              <a href="Admin-Users-Edit.html" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-1"></i>Tambah Data
+              </a>
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Id_User</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th data-type="date" data-format="YYYY/DD/MM">Tanggal_Gabung</th>
+                    <th>Action</th>
+
+                  </tr>
+                </thead>
+
+                <!-- Start modal delete -->
+                <div class="modal fade" id="verticalycentered" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Nama</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Yakin Menghapus data ini?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                        <button type="button" class="btn btn-danger" >Hapus</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Modal-->
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>USR001</td>
+                    <td>John Doe</td>
+                    <td>johndoe@email.com</td>
+                    <td>********</td>
+                    <td>2023/26/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger' data-bs-toggle="modal" data-bs-target="#verticalycentered">Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>USR002</td>
+                    <td>Jane Smith</td>
+                    <td>janesmith@email.com</td>
+                    <td>********</td>
+                    <td>2023/26/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>USR280</td>
+                    <td>Mason Harris</td>
+                    <td>masonharris@email.com</td>
+                    <td>********</td>
+                    <td>2024/04/01</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Data dari blok kedua -->
+                  <tr>
+                    <td>4</td>
+                    <td>USR231</td>
+                    <td>Oliver Harris</td>
+                    <td>oliverharris@email.com</td>
+                    <td>********</td>
+                    <td>2023/28/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>USR232</td>
+                    <td>Emma Turner</td>
+                    <td>emmaturner@email.com</td>
+                    <td>********</td>
+                    <td>2023/29/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>USR255</td>
+                    <td>Ava Davis</td>
+                    <td>avadavis@email.com</td>
+                    <td>********</td>
+                    <td>2023/31/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>USR206</td>
+                    <td>Lily Adams</td>
+                    <td>lilyadams@email.com</td>
+                    <td>********</td>
+                    <td>2023/24/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>USR207</td>
+                    <td>Jack Wilson</td>
+                    <td>jackwilson@email.com</td>
+                    <td>********</td>
+                    <td>2023/25/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>USR230</td>
+                    <td>Aiden Martinez</td>
+                    <td>aidenmartinez@email.com</td>
+                    <td>********</td>
+                    <td>2023/27/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>USR181</td>
+                    <td>Ava Martinez</td>
+                    <td>avamartinez@email.com</td>
+                    <td>********</td>
+                    <td>2023/20/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>USR182</td>
+                    <td>Ethan Turner</td>
+                    <td>ethanturner@email.com</td>
+                    <td>********</td>
+                    <td>2023/21/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>USR183</td>
+                    <td>Isabella White</td>
+                    <td>isabellawhite@email.com</td>
+                    <td>********</td>
+                    <td>2023/22/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>USR205</td>
+                    <td>Noah Davis</td>
+                    <td>noahdavis@email.com</td>
+                    <td>********</td>
+                    <td>2023/23/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>USR156</td>
+                    <td>Chloe White</td>
+                    <td>chloewhite@email.com</td>
+                    <td>********</td>
+                    <td>2023/16/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>USR157</td>
+                    <td>Mason Wilson</td>
+                    <td>masonwilson@email.com</td>
+                    <td>********</td>
+                    <td>2023/17/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>USR158</td>
+                    <td>Scarlett Harris</td>
+                    <td>scarlettharris@email.com</td>
+                    <td>********</td>
+                    <td>2023/18/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>USR180</td>
+                    <td>Logan Miller</td>
+                    <td>loganmiller@email.com</td>
+                    <td>********</td>
+                    <td>2023/19/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>USR131</td>
+                    <td>Grace Turner</td>
+                    <td>graceturner@email.com</td>
+                    <td>********</td>
+                    <td>2023/12/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>USR132</td>
+                    <td>Aiden Brown</td>
+                    <td>aidenbrown@email.com</td>
+                    <td>********</td>
+                    <td>2023/13/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>USR133</td>
+                    <td>Zoe Martinez</td>
+                    <td>zoemartinez@email.com</td>
+                    <td>********</td>
+                    <td>2023/14/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>USR155</td>
+                    <td>Henry Davis</td>
+                    <td>henrydavis@email.com</td>
+                    <td>********</td>
+                    <td>2023/15/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>USR106</td>
+                    <td>Ava Clark</td>
+                    <td>avaclark@email.com</td>
+                    <td>********</td>
+                    <td>2023/08/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>USR107</td>
+                    <td>Jackson Adams</td>
+                    <td>jacksonadams@email.com</td>
+                    <td>********</td>
+                    <td>2023/09/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>USR108</td>
+                    <td>Scarlett Hernandez</td>
+                    <td>scarletthernandez@email.com</td>
+                    <td>********</td>
+                    <td>2023/10/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>25</td>
+                    <td>USR130</td>
+                    <td>Elijah Lee</td>
+                    <td>elijahlee@email.com</td>
+                    <td>********</td>
+                    <td>2023/11/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>26</td>
+                    <td>USR081</td>
+                    <td>Sophie Harris</td>
+                    <td>sophieharris@email.com</td>
+                    <td>********</td>
+                    <td>2023/04/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>27</td>
+                    <td>USR082</td>
+                    <td>Mason Anderson</td>
+                    <td>masonanderson@email.com</td>
+                    <td>********</td>
+                    <td>2023/05/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28</td>
+                    <td>USR083</td>
+                    <td>Lily Martinez</td>
+                    <td>lilymartinez@email.com</td>
+                    <td>********</td>
+                    <td>2023/06/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>29</td>
+                    <td>USR105</td>
+                    <td>Logan White</td>
+                    <td>loganwhite@email.com</td>
+                    <td>********</td>
+                    <td>2023/07/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>USR056</td>
+                    <td>Mia Miller</td>
+                    <td>miamiller@email.com</td>
+                    <td>********</td>
+                    <td>2023/30/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>31</td>
+                    <td>USR057</td>
+                    <td>Noah Davis</td>
+                    <td>noahdavis@email.com</td>
+                    <td>********</td>
+                    <td>2023/01/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>32</td>
+                    <td>USR058</td>
+                    <td>Isabella Wilson</td>
+                    <td>isabellawilson@email.com</td>
+                    <td>********</td>
+                    <td>2023/02/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>33</td>
+                    <td>USR080</td>
+                    <td>Ethan Turner</td>
+                    <td>ethanturner@email.com</td>
+                    <td>********</td>
+                    <td>2023/03/12</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>USR031</td>
+                    <td>Olivia Davis</td>
+                    <td>oliviadavis@email.com</td>
+                    <td>********</td>
+                    <td>2023/26/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>35</td>
+                    <td>USR032</td>
+                    <td>Aiden Johnson</td>
+                    <td>aidenjohnson@email.com</td>
+                    <td>********</td>
+                    <td>2023/27/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>36</td>
+                    <td>USR033</td>
+                    <td>Emma Smith</td>
+                    <td>emmasmith@email.com</td>
+                    <td>********</td>
+                    <td>2023/28/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>37</td>
+                    <td>USR055</td>
+                    <td>Liam Williams</td>
+                    <td>liamwilliams@email.com</td>
+                    <td>********</td>
+                    <td>2023/29/11</td>
+                    <td>
+                      <div class='btn-group'>
+                        <a href='Admin-Users-Edit.html' class='btn btn-warning'>Edit</a>
+                        <a href='#' class='btn btn-danger'>Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Luthfiya</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
